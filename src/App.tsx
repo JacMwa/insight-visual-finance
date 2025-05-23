@@ -4,12 +4,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import RevenuePage from "./pages/RevenuePage";
-import PortfolioPage from "./pages/PortfolioPage";
-import TransactionsPage from "./pages/TransactionsPage";
-import AnalyticsPage from "./pages/AnalyticsPage";
-import SettingsPage from "./pages/SettingsPage";
+import Dashboard from "./pages/Dashboard";
+import VitalsPage from "./pages/VitalsPage";
+import ActivityPage from "./pages/ActivityPage";
+import NutritionPage from "./pages/NutritionPage";
+import SleepPage from "./pages/SleepPage";
+import ProfilePage from "./pages/ProfilePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,12 +21,12 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/revenue" element={<RevenuePage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/transactions" element={<TransactionsPage />} />
-          <Route path="/analytics" element={<AnalyticsPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/vitals" element={<VitalsPage />} />
+          <Route path="/activity" element={<ActivityPage />} />
+          <Route path="/nutrition" element={<NutritionPage />} />
+          <Route path="/sleep" element={<SleepPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
